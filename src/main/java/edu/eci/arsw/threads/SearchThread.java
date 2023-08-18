@@ -1,5 +1,6 @@
-package edu.eci.arsw.blacklistvalidator;
+package edu.eci.arsw.threads;
 
+import edu.eci.arsw.blacklistvalidator.HostBlackListsValidator;
 import edu.eci.arsw.spamkeywordsdatasource.HostBlacklistsDataSourceFacade;
 
 import java.util.LinkedList;
@@ -25,7 +26,7 @@ public class SearchThread extends Thread{
         ocurrencesCount=0;
         checkedListsCount=0;
 
-        for (int i=initialServer;i<endServer && ocurrencesCount<HostBlackListsValidator.BLACK_LIST_ALARM_COUNT ;i++){
+        for (int i = initialServer; i<endServer && ocurrencesCount< HostBlackListsValidator.BLACK_LIST_ALARM_COUNT ; i++){
             checkedListsCount++;
             if (skds.isInBlackListServer(i, this.ipaddress)){
                 blackListOcurrences.add(i);

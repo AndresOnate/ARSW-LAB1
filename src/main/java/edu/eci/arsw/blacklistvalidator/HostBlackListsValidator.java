@@ -6,6 +6,7 @@
 package edu.eci.arsw.blacklistvalidator;
 
 import edu.eci.arsw.spamkeywordsdatasource.HostBlacklistsDataSourceFacade;
+import edu.eci.arsw.threads.SearchThread;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -42,7 +43,7 @@ public class HostBlackListsValidator {
         int totalCheckedListsCount=0;
         for (int i=0;i<N;i++){
             SearchThread thread;
-            if(N== N-1){
+            if(i== N-1){
                 thread = new SearchThread(countServers,totalServers, ipaddress);
 
             }else{
