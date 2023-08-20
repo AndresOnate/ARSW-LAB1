@@ -65,6 +65,8 @@ Para 'refactorizar' este código, y hacer que explote la capacidad multi-núcleo
 
 La estrategia de paralelismo antes implementada es ineficiente en ciertos casos, pues la búsqueda se sigue realizando aún cuando los N hilos (en su conjunto) ya hayan encontrado el número mínimo de ocurrencias requeridas para reportar al servidor como malicioso. Cómo se podría modificar la implementación para minimizar el número de consultas en estos casos?, qué elemento nuevo traería esto al problema?
 
+Se podría usar una variable global, la cual fuera accesible para todos los hilos. Esta variable serviría como un contador de ocurrencias, cuando se registre el máximo, se terminaran todos hilos.
+
 **Parte III - Evaluación de Desempeño**
 
 A partir de lo anterior, implemente la siguiente secuencia de experimentos para realizar las validación de direcciones IP dispersas (por ejemplo 202.24.34.55), tomando los tiempos de ejecución de los mismos (asegúrese de hacerlos en la misma máquina):
@@ -98,7 +100,11 @@ El mejor desempeño no se logra con 500 hilos dado a las caracteristicas del pro
 
 2. Cómo se comporta la solución usando tantos hilos de procesamiento como núcleos comparado con el resultado de usar el doble de éste?.
 
+Podemos apreciar que al usar el doble de núcleos, el tiempo de la solución es 4.2 veces más rapido. Además, el uso de memoria es el doble en el caso de usar tantos núcleos de procesamiento como tiene el computador.
+
 3. De acuerdo con lo anterior, si para este problema en lugar de 100 hilos en una sola CPU se pudiera usar 1 hilo en cada una de 100 máquinas hipotéticas, la ley de Amdahls se aplicaría mejor?. Si en lugar de esto se usaran c hilos en 100/c máquinas distribuidas (siendo c es el número de núcleos de dichas máquinas), se mejoraría?. Explique su respuesta.
 
+Para el primer caso no se podría aplicar la ley de Amdahls dado que los hilos se estarían ejecutando en máquinas distintas, contrario a lo que expone esta ley. Con los resultados de los experimentos podemos apreciar que un solo hilo para resolver el problema tiene un tiempo de desempeño muy alto.
+En el segundo caso podemos apreciar que la cantidad de máquinas depende de la cantidad de hilos, lo que mejoraría el rendimiento de la solución ya que estaría aprovechando los recursos de multiples núcleos en cada máquina.
 
 
