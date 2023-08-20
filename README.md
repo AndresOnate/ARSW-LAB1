@@ -85,6 +85,8 @@ Con lo anterior, y con los tiempos de ejecución dados, haga una gráfica de tie
 
 ![Parte3-6.png](img%2FParte3-6.png)
 
+En base a los resulsutados obtenidos, encontramos que a mayor cantidad de hilos, el tiempo de solución se reduce considerablemente.
+
 **Parte IV - Ejercicio Black List Search**
 
 1. Según la [ley de Amdahls](https://www.pugetsystems.com/labs/articles/Estimating-CPU-Performance-using-Amdahls-Law-619/#WhatisAmdahlsLaw?):
