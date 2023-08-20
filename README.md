@@ -96,9 +96,9 @@ En base a los resulsutados obtenidos, encontramos que a mayor cantidad de hilos,
 Al realizar pruebas con 500 (0,605 segundos) y 200 (1,019 segundos en ejecucón) hilos, encontramos que existe un mejor desempeño si se toma como n a 500.
 El mejor desempeño no se logra con 500 hilos dado a las caracteristicas del procesador del equipo en el que fueron ejecutadas las pruebas, el desempeño puede estar sujeto a otros factores del equipo, como otros programas ejecutando.
 
-3. Cómo se comporta la solución usando tantos hilos de procesamiento como núcleos comparado con el resultado de usar el doble de éste?.
+2. Cómo se comporta la solución usando tantos hilos de procesamiento como núcleos comparado con el resultado de usar el doble de éste?.
 
-4. De acuerdo con lo anterior, si para este problema en lugar de 100 hilos en una sola CPU se pudiera usar 1 hilo en cada una de 100 máquinas hipotéticas, la ley de Amdahls se aplicaría mejor?. Si en lugar de esto se usaran c hilos en 100/c máquinas distribuidas (siendo c es el número de núcleos de dichas máquinas), se mejoraría?. Explique su respuesta.
+3. De acuerdo con lo anterior, si para este problema en lugar de 100 hilos en una sola CPU se pudiera usar 1 hilo en cada una de 100 máquinas hipotéticas, la ley de Amdahls se aplicaría mejor?. Si en lugar de esto se usaran c hilos en 100/c máquinas distribuidas (siendo c es el número de núcleos de dichas máquinas), se mejoraría?. Explique su respuesta.
 
 
 
