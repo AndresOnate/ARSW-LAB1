@@ -101,6 +101,9 @@ En base a los resulsutados obtenidos, encontramos que a mayor cantidad de hilos,
 Al realizar pruebas con 500 (0,605 segundos) y 200 (1,019 segundos en ejecucón) hilos, de forma practica bajo las condiciones en las que fueron ejecutadas las pruebas encontramos que existe un mejor desempeño si se toma como n a 500.
 De forma teorica y usando la ley de Amdahls el mejor desempeño no se logra con 500 hilos dado a las caracteristicas del procesador del equipo en el que fueron ejecutadas las pruebas, el desempeño puede estar sujeto a otros factores del equipo, como otros programas ejecutando.
 
+Si tomamos que la fracción del algoritmo que se puede hacer paralela es del 60% y al aplicar la fórmula de la ley de Amdahls encontramos los siguientes resultados:
+S(200)= 2.4813 y S(500)= 2.49 encontramos evidencia de que con 500 hilos efectivamente el tiempo de solución es mas corto, pero por la naturaleza de la función, esta tenderá al infinito y el rendimiento no continuara mejorando.
+
 2. Cómo se comporta la solución usando tantos hilos de procesamiento como núcleos comparado con el resultado de usar el doble de éste?.
 
 Podemos apreciar que al usar el doble de núcleos, el tiempo de la solución es 4.2 veces más rapido. Además, el uso de memoria es el doble en el caso de usar tantos núcleos de procesamiento como tiene el computador.
