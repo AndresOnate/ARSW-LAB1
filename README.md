@@ -98,7 +98,7 @@ En base a los resulsutados obtenidos, encontramos que a mayor cantidad de hilos,
 
 	![](img/ahmdahls.png), donde _S(n)_ es el mejoramiento teórico del desempeño, _P_ la fracción paralelizable del algoritmo, y _n_ el número de hilos, a mayor _n_, mayor debería ser dicha mejora. Por qué el mejor desempeño no se logra con los 500 hilos?, cómo se compara este desempeño cuando se usan 200?.
 
-Al realizar pruebas con 500 (0,605 segundos) y 200 (1,019 segundos en ejecucón) hilos, encontramos que existe un mejor desempeño si se toma como n a 500, por lo que de forma practica bajo las condiciones en las que fueron ejecutadas las pruebas, si se logra un mejor desempeño con 500 hilos.
+Al realizar pruebas con 500 (0,605 segundos) y 200 (1,019 segundos en ejecucón) hilos, de forma practica bajo las condiciones en las que fueron ejecutadas las pruebas encontramos que existe un mejor desempeño si se toma como n a 500.
 De forma teorica y usando la ley de Amdahls el mejor desempeño no se logra con 500 hilos dado a las caracteristicas del procesador del equipo en el que fueron ejecutadas las pruebas, el desempeño puede estar sujeto a otros factores del equipo, como otros programas ejecutando.
 
 2. Cómo se comporta la solución usando tantos hilos de procesamiento como núcleos comparado con el resultado de usar el doble de éste?.
