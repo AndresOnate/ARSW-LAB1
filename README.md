@@ -110,7 +110,6 @@ Podemos apreciar que al usar el doble de núcleos, el tiempo de la solución es 
 
 3. De acuerdo con lo anterior, si para este problema en lugar de 100 hilos en una sola CPU se pudiera usar 1 hilo en cada una de 100 máquinas hipotéticas, la ley de Amdahls se aplicaría mejor?. Si en lugar de esto se usaran c hilos en 100/c máquinas distribuidas (siendo c es el número de núcleos de dichas máquinas), se mejoraría?. Explique su respuesta.
 
-Para el primer caso no se podría aplicar la ley de Amdahls dado que los hilos se estarían ejecutando en máquinas distintas, contrario a lo que expone esta ley. Con los resultados de los experimentos podemos apreciar que un solo hilo para resolver el problema tiene un tiempo de desempeño muy alto.
-En el segundo caso podemos apreciar que la cantidad de máquinas depende de la cantidad de hilos, lo que mejoraría el rendimiento de la solución ya que estaría aprovechando los recursos de multiples núcleos en cada máquina.
+En el primer caso, ejecutar el algoritmo en máquinas distintas podría traer un mejor rendimiento, dado que cada hilo podría aprovechar esta capacidad para resolver el subproblema, pero con los resultados de los experimentos podemos apreciar que un solo hilo para resolver el problema tiene un tiempo de desempeño muy alto. En el segundo caso podemos apreciar que la cantidad de máquinas depende de la cantidad de hilos, lo que mejoraría el rendimiento de la solución ya que estaría aprovechando los recursos de múltiples núcleos en cada máquina. Si utilizamos la definición teórica de la ley de Amdahls, ambos casos tendrían el mismo valor de la fracción paralelizable, si se ejecutan 100 hilos, el mejoramiento teórico seria el mismo.
 
 
